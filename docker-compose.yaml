@@ -1,0 +1,63 @@
+version: "3.9"
+services:
+  rabbitmq:
+    image: rabbitmq:3.9.13-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq:/var/lib/rabbitmq/mnesia
+    environment:
+      - RABBITMQ_NODE_PORT=5672 
+    networks:
+      - nifi-network
+    links:
+      - nifi
+  nifi:
+    image: apache/nifi
+    container_name: nifi
+    ports:
+      - "8443:8443"
+      - "8080:8080"
+      - "8050:8050"
+      
+    environment:
+      - SINGLE_USER_CREDENTIALS_USERNAME=admin
+      - SINGLE_USER_CREDENTIALS_PASSWORD=ctsBtRBKHRAx69EqUghvvgEvjnaLjFEB
+    
+    volumes:
+      - nifi:/opt/nifi/nifi-current/logs
+        
+    networks:
+      - nifi-network
+
+    healthcheck:
+      test: ["CMD", "curl", "http://localhost:8080/nifi-api/"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+  mongodb:
+    image: mongo:5.0.9-focal
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - data:/data/db
+    networks:
+      - nifi-network
+    healthcheck:
+      test: ["CMD", "mongo", "--eval", "printjson(db.runCommand({ping: 1}))"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+networks:
+  nifi-network:
+    name: nifi-network
+    driver: bridge
+volumes:
+   data:
+   nifi:
+   rabbitmq:
+
+    
