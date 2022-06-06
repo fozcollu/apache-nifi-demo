@@ -51,6 +51,14 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
+  orderapi:
+    image: order-api-image
+    container_name: order-server-api
+    networks:
+      - nifi-network
+    ports:
+      - "8081:8081"
+
 networks:
   nifi-network:
     name: nifi-network
