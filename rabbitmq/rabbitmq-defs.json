@@ -1,0 +1,32 @@
+{
+  "exchanges": [
+    {
+      "name": "order",
+      "vhost": "/",
+      "type": "fanout",
+      "durable": true,
+      "auto_delete": false,
+      "internal": false,
+      "arguments": {}
+    }
+  ],
+  "queues": [
+    {
+      "name": "order_queue",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ],
+  "bindings": [
+    {
+      "source": "order",
+      "vhost": "/",
+      "destination": "order_queue",
+      "destination_type": "queue",
+      "routing_key": "order-key",
+      "arguments": {}
+    }
+  ]
+}
