@@ -1,4 +1,22 @@
-# apache-nifi-demo (test purpose only)
+# Apache NiFi Demo (test purpose only)
 
-#### 1-) docker build -t order-api-image ./order-api/
-#### 2-) docker-compose up -d
+
+## Introduction
+
+This projects contains a simple Apache NiFi demo works with docker.
+
+## Prerequire
+
+```sh
+ # build order api
+ 
+ docker build -t order-api-image ./order-api/
+```
+
+## Execute
+
+```docker 
+ docker-compose up -d
+```
+
+# Contrubute
