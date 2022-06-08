@@ -61,7 +61,7 @@ services:
       timeout: 10s
       retries: 3
   orderapi:
-    image: order-api-image
+    build: ./order-api
     container_name: order-server-api
     networks:
       - nifi-network
