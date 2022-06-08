@@ -19,4 +19,4 @@ This projects contains a simple Apache NiFi demo works with docker.
  docker-compose up -d
 ```
 
-# Contrubute
+# Contribute
