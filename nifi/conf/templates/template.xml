@@ -1,17 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.3">
     <description></description>
-    <groupId>37e928db-0181-1000-3725-34c7e93c8140</groupId>
-    <name>pd-order-pipeline-template</name>
+    <groupId>4291b981-0181-1000-4d8b-d208a818a3e4</groupId>
+    <name>template-v2</name>
     <snippet>
         <connections>
-            <id>0acf0a63-e211-3e79-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>19983e97-f185-392f-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>55ce7f73-bf91-386b-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>7106d9bf-c320-350c-0000-000000000000</id>
+                <type>OUTPUT_PORT</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>5fcfd039-af1c-3619-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>34244fd4-a24f-3753-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>5fcfd039-af1c-3619-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -23,20 +48,20 @@
             <name></name>
             <selectedRelationships>success</selectedRelationships>
             <source>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>89229da5-9172-3d4c-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>672b64dc-0034-3a8d-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>18701c4a-fbbd-39ac-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>4feacddf-5aeb-3239-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>8ae8c59c-6f2d-3c8f-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>8f4317c3-6d6f-3248-0000-000000000000</id>
                 <type>OUTPUT_PORT</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -48,45 +73,20 @@
             <name></name>
             <selectedRelationships>failure</selectedRelationships>
             <source>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>9f9137c1-521a-31b2-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>149463ec-580c-3670-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>6030e318-1107-3ef1-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>7d29662c-2483-39dc-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>8755faa0-5140-3c37-0000-000000000000</id>
-                <type>OUTPUT_PORT</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-            <name></name>
-            <selectedRelationships>success</selectedRelationships>
-            <source>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>9f9137c1-521a-31b2-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>795189c8-1f91-3002-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <destination>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>9f9137c1-521a-31b2-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>149463ec-580c-3670-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -98,20 +98,20 @@
             <name></name>
             <selectedRelationships>success</selectedRelationships>
             <source>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>97864bdb-0d00-33c3-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>978f5f23-5020-3040-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>b14b8828-2894-3db9-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>e79191b0-4fe3-38c7-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>8ae8c59c-6f2d-3c8f-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>8f4317c3-6d6f-3248-0000-000000000000</id>
                 <type>OUTPUT_PORT</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -123,20 +123,20 @@
             <name></name>
             <selectedRelationships>failure</selectedRelationships>
             <source>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>55ce7f73-bf91-386b-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>5fcfd039-af1c-3619-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>f7eb3a43-82d4-3125-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>f15a2a1d-b2b2-301b-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>8755faa0-5140-3c37-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>7106d9bf-c320-350c-0000-000000000000</id>
                 <type>OUTPUT_PORT</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -148,15 +148,15 @@
             <name></name>
             <selectedRelationships>success</selectedRelationships>
             <source>
-                <groupId>a32483ca-c8c8-3245-0000-000000000000</groupId>
-                <id>55ce7f73-bf91-386b-0000-000000000000</id>
+                <groupId>3db5364f-e812-3840-0000-000000000000</groupId>
+                <id>149463ec-580c-3670-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <controllerServices>
-            <id>305ab637-6399-32e7-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>c7a06201-03c2-3710-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -318,41 +318,41 @@
             <type>org.apache.nifi.json.JsonTreeReader</type>
         </controllerServices>
         <outputPorts>
-            <id>8755faa0-5140-3c37-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>7106d9bf-c320-350c-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <position>
-                <x>1192.0</x>
+                <x>1328.0</x>
                 <y>280.0</y>
             </position>
             <allowRemoteAccess>true</allowRemoteAccess>
             <comments></comments>
             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
             <name>success-output</name>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <transmitting>false</transmitting>
             <type>OUTPUT_PORT</type>
         </outputPorts>
         <outputPorts>
-            <id>8ae8c59c-6f2d-3c8f-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>8f4317c3-6d6f-3248-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <position>
-                <x>712.0</x>
+                <x>848.0</x>
                 <y>784.0</y>
             </position>
             <allowRemoteAccess>true</allowRemoteAccess>
             <comments></comments>
             <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
             <name>failure-output</name>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <transmitting>false</transmitting>
             <type>OUTPUT_PORT</type>
         </outputPorts>
         <processors>
-            <id>55ce7f73-bf91-386b-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>149463ec-580c-3670-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <position>
-                <x>48.0</x>
-                <y>264.0</y>
+                <x>0.0</x>
+                <y>149.0</y>
             </position>
             <bundle>
                 <artifact>nifi-amqp-nar</artifact>
@@ -467,7 +467,7 @@
                     </entry>
                     <entry>
                         <key>Host Name</key>
-                        <value>172.18.0.4</value>
+                        <value>rabbitmq</value>
                     </entry>
                     <entry>
                         <key>Port</key>
@@ -517,15 +517,384 @@
                 <name>success</name>
                 <retry>false</retry>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.amqp.processors.PublishAMQP</type>
         </processors>
         <processors>
-            <id>89229da5-9172-3d4c-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
+            <id>5fcfd039-af1c-3619-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
             <position>
-                <x>1032.0</x>
+                <x>1272.0</x>
+                <y>504.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-mongodb-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.16.2</version>
+            </bundle>
+            <config>
+                <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>mongo-client-service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.mongodb.MongoDBClientService</identifiesControllerService>
+                            <name>mongo-client-service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Mongo URI</key>
+                        <value>
+                            <name>Mongo URI</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Mongo Database Name</key>
+                        <value>
+                            <name>Mongo Database Name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Mongo Collection Name</key>
+                        <value>
+                            <name>Mongo Collection Name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ssl-context-service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                            <name>ssl-context-service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ssl-client-auth</key>
+                        <value>
+                            <name>ssl-client-auth</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Write Concern</key>
+                        <value>
+                            <name>Write Concern</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>record-reader</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
+                            <name>record-reader</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>insert_count</key>
+                        <value>
+                            <name>insert_count</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ordered</key>
+                        <value>
+                            <name>ordered</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>bypass-validation</key>
+                        <value>
+                            <name>bypass-validation</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>update-key-fields</key>
+                        <value>
+                            <name>update-key-fields</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>update-mode</key>
+                        <value>
+                            <dependencies>
+<propertyName>update-key-fields</propertyName>
+                            </dependencies>
+                            <name>update-mode</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>mongo-client-service</key>
+                    </entry>
+                    <entry>
+                        <key>Mongo URI</key>
+                        <value>mongodb://mongodb:27017</value>
+                    </entry>
+                    <entry>
+                        <key>Mongo Database Name</key>
+                        <value>pd</value>
+                    </entry>
+                    <entry>
+                        <key>Mongo Collection Name</key>
+                        <value>order</value>
+                    </entry>
+                    <entry>
+                        <key>ssl-context-service</key>
+                    </entry>
+                    <entry>
+                        <key>ssl-client-auth</key>
+                        <value>REQUIRED</value>
+                    </entry>
+                    <entry>
+                        <key>Write Concern</key>
+                        <value>ACKNOWLEDGED</value>
+                    </entry>
+                    <entry>
+                        <key>record-reader</key>
+                        <value>c7a06201-03c2-3710-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>insert_count</key>
+                        <value>100</value>
+                    </entry>
+                    <entry>
+                        <key>ordered</key>
+                        <value>False</value>
+                    </entry>
+                    <entry>
+                        <key>bypass-validation</key>
+                        <value>True</value>
+                    </entry>
+                    <entry>
+                        <key>update-key-fields</key>
+                    </entry>
+                    <entry>
+                        <key>update-mode</key>
+                        <value>one</value>
+                    </entry>
+                </properties>
+                <retryCount>10</retryCount>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>PutMongoRecord</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+                <retry>false</retry>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+                <retry>false</retry>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.processors.mongodb.PutMongoRecord</type>
+        </processors>
+        <processors>
+            <id>672b64dc-0034-3a8d-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
+            <position>
+                <x>136.0</x>
+                <y>736.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-amqp-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.16.2</version>
+            </bundle>
+            <config>
+                <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Queue</key>
+                        <value>
+                            <name>Queue</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>auto.acknowledge</key>
+                        <value>
+                            <name>auto.acknowledge</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>batch.size</key>
+                        <value>
+                            <name>batch.size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>remove.curly.braces</key>
+                        <value>
+                            <name>remove.curly.braces</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>header.separator</key>
+                        <value>
+                            <name>header.separator</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Brokers</key>
+                        <value>
+                            <name>Brokers</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Host Name</key>
+                        <value>
+                            <name>Host Name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Port</key>
+                        <value>
+                            <name>Port</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Virtual Host</key>
+                        <value>
+                            <name>Virtual Host</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>User Name</key>
+                        <value>
+                            <name>User Name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Password</key>
+                        <value>
+                            <name>Password</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>AMQP Version</key>
+                        <value>
+                            <name>AMQP Version</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ssl-context-service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                            <name>ssl-context-service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>cert-authentication</key>
+                        <value>
+                            <name>cert-authentication</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>ssl-client-auth</key>
+                        <value>
+                            <name>ssl-client-auth</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Queue</key>
+                        <value>order_queue</value>
+                    </entry>
+                    <entry>
+                        <key>auto.acknowledge</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>batch.size</key>
+                        <value>10</value>
+                    </entry>
+                    <entry>
+                        <key>remove.curly.braces</key>
+                        <value>False</value>
+                    </entry>
+                    <entry>
+                        <key>header.separator</key>
+                        <value>,</value>
+                    </entry>
+                    <entry>
+                        <key>Brokers</key>
+                    </entry>
+                    <entry>
+                        <key>Host Name</key>
+                        <value>rabbitmq</value>
+                    </entry>
+                    <entry>
+                        <key>Port</key>
+                        <value>5672</value>
+                    </entry>
+                    <entry>
+                        <key>Virtual Host</key>
+                    </entry>
+                    <entry>
+                        <key>User Name</key>
+                        <value>guest</value>
+                    </entry>
+                    <entry>
+                        <key>Password</key>
+                    </entry>
+                    <entry>
+                        <key>AMQP Version</key>
+                        <value>0.9.1</value>
+                    </entry>
+                    <entry>
+                        <key>ssl-context-service</key>
+                    </entry>
+                    <entry>
+                        <key>cert-authentication</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>ssl-client-auth</key>
+                        <value>NONE</value>
+                    </entry>
+                </properties>
+                <retryCount>10</retryCount>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>ConsumeAMQP</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+                <retry>false</retry>
+            </relationships>
+            <state>RUNNING</state>
+            <style/>
+            <type>org.apache.nifi.amqp.processors.ConsumeAMQP</type>
+        </processors>
+        <processors>
+            <id>978f5f23-5020-3040-0000-000000000000</id>
+            <parentGroupId>3db5364f-e812-3840-0000-000000000000</parentGroupId>
+            <position>
+                <x>1168.0</x>
                 <y>0.0</y>
             </position>
             <bundle>
@@ -722,379 +1091,10 @@
                 <name>success</name>
                 <retry>false</retry>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.ListenHTTP</type>
         </processors>
-        <processors>
-            <id>97864bdb-0d00-33c3-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
-            <position>
-                <x>0.0</x>
-                <y>736.0</y>
-            </position>
-            <bundle>
-                <artifact>nifi-amqp-nar</artifact>
-                <group>org.apache.nifi</group>
-                <version>1.16.2</version>
-            </bundle>
-            <config>
-                <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
-                <bulletinLevel>WARN</bulletinLevel>
-                <comments></comments>
-                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                <descriptors>
-                    <entry>
-                        <key>Queue</key>
-                        <value>
-                            <name>Queue</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>auto.acknowledge</key>
-                        <value>
-                            <name>auto.acknowledge</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>batch.size</key>
-                        <value>
-                            <name>batch.size</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>remove.curly.braces</key>
-                        <value>
-                            <name>remove.curly.braces</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>header.separator</key>
-                        <value>
-                            <name>header.separator</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Brokers</key>
-                        <value>
-                            <name>Brokers</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Host Name</key>
-                        <value>
-                            <name>Host Name</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Port</key>
-                        <value>
-                            <name>Port</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Virtual Host</key>
-                        <value>
-                            <name>Virtual Host</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>User Name</key>
-                        <value>
-                            <name>User Name</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Password</key>
-                        <value>
-                            <name>Password</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>AMQP Version</key>
-                        <value>
-                            <name>AMQP Version</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>ssl-context-service</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
-                            <name>ssl-context-service</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>cert-authentication</key>
-                        <value>
-                            <name>cert-authentication</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>ssl-client-auth</key>
-                        <value>
-                            <name>ssl-client-auth</name>
-                        </value>
-                    </entry>
-                </descriptors>
-                <executionNode>ALL</executionNode>
-                <lossTolerant>false</lossTolerant>
-                <maxBackoffPeriod>10 mins</maxBackoffPeriod>
-                <penaltyDuration>30 sec</penaltyDuration>
-                <properties>
-                    <entry>
-                        <key>Queue</key>
-                        <value>order_queue</value>
-                    </entry>
-                    <entry>
-                        <key>auto.acknowledge</key>
-                        <value>false</value>
-                    </entry>
-                    <entry>
-                        <key>batch.size</key>
-                        <value>10</value>
-                    </entry>
-                    <entry>
-                        <key>remove.curly.braces</key>
-                        <value>False</value>
-                    </entry>
-                    <entry>
-                        <key>header.separator</key>
-                        <value>,</value>
-                    </entry>
-                    <entry>
-                        <key>Brokers</key>
-                    </entry>
-                    <entry>
-                        <key>Host Name</key>
-                        <value>172.18.0.4</value>
-                    </entry>
-                    <entry>
-                        <key>Port</key>
-                        <value>5672</value>
-                    </entry>
-                    <entry>
-                        <key>Virtual Host</key>
-                    </entry>
-                    <entry>
-                        <key>User Name</key>
-                        <value>guest</value>
-                    </entry>
-                    <entry>
-                        <key>Password</key>
-                    </entry>
-                    <entry>
-                        <key>AMQP Version</key>
-                        <value>0.9.1</value>
-                    </entry>
-                    <entry>
-                        <key>ssl-context-service</key>
-                    </entry>
-                    <entry>
-                        <key>cert-authentication</key>
-                        <value>false</value>
-                    </entry>
-                    <entry>
-                        <key>ssl-client-auth</key>
-                        <value>NONE</value>
-                    </entry>
-                </properties>
-                <retryCount>10</retryCount>
-                <runDurationMillis>0</runDurationMillis>
-                <schedulingPeriod>0 sec</schedulingPeriod>
-                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                <yieldDuration>1 sec</yieldDuration>
-            </config>
-            <executionNodeRestricted>false</executionNodeRestricted>
-            <name>ConsumeAMQP</name>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>success</name>
-                <retry>false</retry>
-            </relationships>
-            <state>STOPPED</state>
-            <style/>
-            <type>org.apache.nifi.amqp.processors.ConsumeAMQP</type>
-        </processors>
-        <processors>
-            <id>9f9137c1-521a-31b2-0000-000000000000</id>
-            <parentGroupId>a32483ca-c8c8-3245-0000-000000000000</parentGroupId>
-            <position>
-                <x>1136.0</x>
-                <y>504.0</y>
-            </position>
-            <bundle>
-                <artifact>nifi-mongodb-nar</artifact>
-                <group>org.apache.nifi</group>
-                <version>1.16.2</version>
-            </bundle>
-            <config>
-                <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
-                <bulletinLevel>WARN</bulletinLevel>
-                <comments></comments>
-                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                <descriptors>
-                    <entry>
-                        <key>mongo-client-service</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.mongodb.MongoDBClientService</identifiesControllerService>
-                            <name>mongo-client-service</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Mongo URI</key>
-                        <value>
-                            <name>Mongo URI</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Mongo Database Name</key>
-                        <value>
-                            <name>Mongo Database Name</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Mongo Collection Name</key>
-                        <value>
-                            <name>Mongo Collection Name</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>ssl-context-service</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
-                            <name>ssl-context-service</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>ssl-client-auth</key>
-                        <value>
-                            <name>ssl-client-auth</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Write Concern</key>
-                        <value>
-                            <name>Write Concern</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>record-reader</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
-                            <name>record-reader</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>insert_count</key>
-                        <value>
-                            <name>insert_count</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>ordered</key>
-                        <value>
-                            <name>ordered</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>bypass-validation</key>
-                        <value>
-                            <name>bypass-validation</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>update-key-fields</key>
-                        <value>
-                            <name>update-key-fields</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>update-mode</key>
-                        <value>
-                            <dependencies>
-<propertyName>update-key-fields</propertyName>
-                            </dependencies>
-                            <name>update-mode</name>
-                        </value>
-                    </entry>
-                </descriptors>
-                <executionNode>ALL</executionNode>
-                <lossTolerant>false</lossTolerant>
-                <maxBackoffPeriod>10 mins</maxBackoffPeriod>
-                <penaltyDuration>30 sec</penaltyDuration>
-                <properties>
-                    <entry>
-                        <key>mongo-client-service</key>
-                    </entry>
-                    <entry>
-                        <key>Mongo URI</key>
-                        <value>mongodb://172.18.0.2:27017</value>
-                    </entry>
-                    <entry>
-                        <key>Mongo Database Name</key>
-                        <value>pd</value>
-                    </entry>
-                    <entry>
-                        <key>Mongo Collection Name</key>
-                        <value>order</value>
-                    </entry>
-                    <entry>
-                        <key>ssl-context-service</key>
-                    </entry>
-                    <entry>
-                        <key>ssl-client-auth</key>
-                        <value>REQUIRED</value>
-                    </entry>
-                    <entry>
-                        <key>Write Concern</key>
-                        <value>ACKNOWLEDGED</value>
-                    </entry>
-                    <entry>
-                        <key>record-reader</key>
-                        <value>305ab637-6399-32e7-0000-000000000000</value>
-                    </entry>
-                    <entry>
-                        <key>insert_count</key>
-                        <value>100</value>
-                    </entry>
-                    <entry>
-                        <key>ordered</key>
-                        <value>False</value>
-                    </entry>
-                    <entry>
-                        <key>bypass-validation</key>
-                        <value>True</value>
-                    </entry>
-                    <entry>
-                        <key>update-key-fields</key>
-                    </entry>
-                    <entry>
-                        <key>update-mode</key>
-                        <value>one</value>
-                    </entry>
-                </properties>
-                <retryCount>10</retryCount>
-                <runDurationMillis>0</runDurationMillis>
-                <schedulingPeriod>0 sec</schedulingPeriod>
-                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                <yieldDuration>1 sec</yieldDuration>
-            </config>
-            <executionNodeRestricted>false</executionNodeRestricted>
-            <name>PutMongoRecord</name>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>failure</name>
-                <retry>false</retry>
-            </relationships>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>success</name>
-                <retry>false</retry>
-            </relationships>
-            <state>STOPPED</state>
-            <style/>
-            <type>org.apache.nifi.processors.mongodb.PutMongoRecord</type>
-        </processors>
     </snippet>
-    <timestamp>06/06/2022 13:35:05 UTC</timestamp>
+    <timestamp>06/08/2022 09:09:35 UTC</timestamp>
 </template>

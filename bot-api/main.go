@@ -4,8 +4,9 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"log"
+	"io"
 	"net/http"
+	"sync"
 	"time"
 )
 
@@ -138,29 +139,130 @@ type OrderPayload struct {
 	Vouchers    []interface{} `json:"vouchers"`
 }
 
+var DefaultPayload = &OrderPayload{
+	Token: "",
+	Code:  "",
+	Comments: struct {
+		CustomerComment string `json:"customerComment"`
+		VendorComment   string `json:"vendorComment"`
+	}{},
+	CreatedAt: time.Time{},
+	Customer: struct {
+		Email                  string `json:"email"`
+		FirstName              string `json:"firstName"`
+		LastName               string `json:"lastName"`
+		MobilePhone            string `json:"mobilePhone"`
+		Code                   string `json:"code"`
+		ID                     string `json:"id"`
+		MobilePhoneCountryCode string `json:"mobilePhoneCountryCode"`
+	}{},
+	Delivery: struct {
+		Address struct {
+			Postcode int    `json:"postcode"`
+			City     string `json:"city"`
+			Street   string `json:"street"`
+			Number   int    `json:"number"`
+		} `json:"address"`
+		ExpectedDeliveryTime time.Time `json:"expectedDeliveryTime"`
+		ExpressDelivery      bool      `json:"expressDelivery"`
+		RiderPickupTime      time.Time `json:"riderPickupTime"`
+	}{},
+	Discounts:      nil,
+	ExpeditionType: "",
+	ExpiryDate:     time.Time{},
+	ExtraParameters: struct {
+		Property1 string `json:"property1"`
+		Property2 string `json:"property2"`
+	}{},
+	LocalInfo: struct {
+		CountryCode            string `json:"countryCode"`
+		CurrencySymbol         string `json:"currencySymbol"`
+		Platform               string `json:"platform"`
+		PlatformKey            string `json:"platformKey"`
+		CurrencySymbolPosition string `json:"currencySymbolPosition"`
+		CurrencySymbolSpaces   string `json:"currencySymbolSpaces"`
+		DecimalDigits          string `json:"decimalDigits"`
+		DecimalSeparator       string `json:"decimalSeparator"`
+		Email                  string `json:"email"`
+		Phone                  string `json:"phone"`
+		ThousandsSeparator     string `json:"thousandsSeparator"`
+		Website                string `json:"website"`
+	}{},
+	Payment: struct {
+		Status              string `json:"status"`
+		Type                string `json:"type"`
+		RemoteCode          string `json:"remoteCode"`
+		RequiredMoneyChange string `json:"requiredMoneyChange"`
+		VatID               string `json:"vatId"`
+		VatName             string `json:"vatName"`
+	}{},
+	Test:      false,
+	ShortCode: "",
+	PreOrder:  false,
+	Pickup:    nil,
+	PlatformRestaurant: struct {
+		ID string `json:"id"`
+	}{},
+	Price: struct {
+		DeliveryFees []struct {
+			Name  string  `json:"name"`
+			Value float64 `json:"value"`
+		} `json:"deliveryFees"`
+		GrandTotal                       string `json:"grandTotal"`
+		MinimumDeliveryValue             string `json:"minimumDeliveryValue"`
+		PayRestaurant                    string `json:"payRestaurant"`
+		RiderTip                         string `json:"riderTip"`
+		SubTotal                         string `json:"subTotal"`
+		VatTotal                         string `json:"vatTotal"`
+		Comission                        string `json:"comission"`
+		ContainerCharge                  string `json:"containerCharge"`
+		DeliveryFee                      string `json:"deliveryFee"`
+		CollectFromCustomer              string `json:"collectFromCustomer"`
+		DiscountAmountTotal              string `json:"discountAmountTotal"`
+		DeliveryFeeDiscount              string `json:"deliveryFeeDiscount"`
+		ServiceFeePercent                string `json:"serviceFeePercent"`
+		ServiceFeeTotal                  string `json:"serviceFeeTotal"`
+		ServiceTax                       int    `json:"serviceTax"`
+		ServiceTaxValue                  int    `json:"serviceTaxValue"`
+		DifferenceToMinimumDeliveryValue string `json:"differenceToMinimumDeliveryValue"`
+		VatVisible                       bool   `json:"vatVisible"`
+		VatPercent                       string `json:"vatPercent"`
+	}{},
+	Products:        nil,
+	CorporateOrder:  false,
+	CorporateTaxID:  "",
+	IntegrationInfo: struct{}{},
+	MobileOrder:     false,
+	WebOrder:        false,
+	Vouchers:        nil,
+}
+
 func main() {
-	fmt.Println("Order-api initializing")
 
-	http.HandleFunc("/order", func(writer http.ResponseWriter, request *http.Request) {
-		var orderPayload OrderPayload
-		fmt.Println("Request Received")
-		time.Sleep(time.Second * 3)
-		if err := json.NewDecoder(request.Body).Decode(&orderPayload); err == nil {
+	var wg sync.WaitGroup
+	for i := 0; i < 100; i++ {
+		wg.Add(1)
+		go func(index int, wg *sync.WaitGroup) {
+			defer wg.Done()
+			newPayload := new(OrderPayload)
+			*newPayload = *DefaultPayload
+			newPayload.Code = fmt.Sprintf("CODE %d", index+1)
 
-			fmt.Fprintf(writer, fmt.Sprintf("Success %s", orderPayload.Code))
+			jsonModel, _ := json.Marshal(newPayload)
 
-			jsonModel, _ := json.Marshal(orderPayload)
-
-			_, err := http.Post("http://nifi:8050/order", "application/json",
+			resp, err := http.Post("http://localhost:8081/order", "application/json",
 				bytes.NewBuffer(jsonModel))
 
 			if err != nil {
 				fmt.Println(err.Error())
 			}
 
-			fmt.Println(orderPayload.Code)
-		}
+			b, err := io.ReadAll(resp.Body)
 
-	})
-	log.Fatal(http.ListenAndServe(":8081", nil))
+			fmt.Printf("Response received -> %s \n", string(b))
+
+		}(i, &wg)
+
+	}
+	wg.Wait()
 }

@@ -3,7 +3,7 @@
     {
       "name": "order",
       "vhost": "/",
-      "type": "fanout",
+      "type": "direct",
       "durable": true,
       "auto_delete": false,
       "internal": false,
