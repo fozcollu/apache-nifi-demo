@@ -22,9 +22,9 @@ function fn() {
   }
 
   if (env == 'dev') {
-    config.apiUrl =  'http://localhost:8081/'
+    config.apiUrl =  'http://nifi:8050/'
     config.mongodbInfo = {
-      connectionUrl: "mongodb://localhost:27017",
+      connectionUrl: "mongodb://mongodb:27017",
       databaseName: "pd",
       collectionName: "order",
     };
