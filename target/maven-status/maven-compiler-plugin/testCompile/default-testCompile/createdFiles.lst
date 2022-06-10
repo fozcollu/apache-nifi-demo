@@ -1,0 +1,7 @@
+helpers/DataGenerator.class
+NifiTests/NifiTest.class
+helpers/RabbitMQHandler.class
+helpers/Utils.class
+helpers/MongoDbHandler.class
+helpers/RabbitMQHandler$1.class
+helpers/DbHandler.class

@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: NifiTests.NifiTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.2 s <<< FAILURE! - in NifiTests.NifiTest
+testParallel  Time elapsed: 15.178 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+http call failed after 776 milliseconds for url: http://nifi:8050/order
+classpath:NifiTests/feature/NifiTest.feature:18 ==> expected: <0> but was: <1>
+	at NifiTests.NifiTest.testParallel(NifiTest.java:24)
+

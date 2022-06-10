@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Failures Overview</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>demo</td>
+      <td>10 Jun 2022, 08:48</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Failures Overview</h2>
+      <p>The following summary displays scenarios that failed.</p>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+        <div class="elements">
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2366946876.html">NifiTests/feature/NifiTest.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4084566002.html">@nifi1</a>
+       <a href="report-tag_2209970173.html">@nifi</a>
+</div>
+
+
+  <span class="lead-duration duration">1.104</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Nifi Test - Check With Code from db</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">def code = dataGenerator.getRandomCode()</span>
+
+  <span class="lead-duration duration">0.138</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">set nifiRequestBody.code =  code</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path 'order'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request nifiRequestBody</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When failed">
+  <span class="keyword indention">When</span>
+  <span class="name">method Post</span>
+
+  <span class="lead-duration duration">0.961</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>http</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>http call failed after 776 milliseconds for url: http://nifi:8050/order
+classpath:NifiTests/feature/NifiTest.feature:18</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>08:48:25.022 request:
+1 &gt; POST http://nifi:8050/order
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2352
+1 &gt; Host: nifi:8050
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;token&quot;:&quot;5f373562-591a-4db9-8609-7eec7880f28d&quot;,&quot;code&quot;:&quot;test-82&quot;,&quot;comments&quot;:{&quot;customerComment&quot;:&quot;Please hurry, I am hungry&quot;,&quot;vendorComment&quot;:&quot;&quot;},&quot;createdAt&quot;:&quot;2016-03-14T17:00:00.000Z&quot;,&quot;customer&quot;:{&quot;email&quot;:&quot;s188sduisddsnjknsj&quot;,&quot;firstName&quot;:&quot;food&quot;,&quot;lastName&quot;:&quot;panda&quot;,&quot;mobilePhone&quot;:&quot;+49 99999999&quot;,&quot;code&quot;:&quot;dummy_customer_code&quot;,&quot;id&quot;:&quot;dummy_customer_Id&quot;,&quot;mobilePhoneCountryCode&quot;:&quot;&quot;},&quot;delivery&quot;:{&quot;address&quot;:{&quot;postcode&quot;:10117,&quot;city&quot;:&quot;Berlin&quot;,&quot;street&quot;:&quot;Oranienburger Sta&szlig;e&quot;,&quot;number&quot;:67},&quot;expectedDeliveryTime&quot;:&quot;2016-03-14T17:50:00.000Z&quot;,&quot;expressDelivery&quot;:false,&quot;riderPickupTime&quot;:&quot;2016-03-14T17:35:00.000Z&quot;},&quot;discounts&quot;:[{&quot;name&quot;:&quot;Flat 30% OFF&quot;,&quot;amount&quot;:&quot;10,5&quot;,&quot;type&quot;:&quot;string&quot;}],&quot;expeditionType&quot;:&quot;pickup&quot;,&quot;expiryDate&quot;:&quot;2016-03-14T17:15:00.000Z&quot;,&quot;extraParameters&quot;:{&quot;property1&quot;:&quot;string&quot;,&quot;property2&quot;:&quot;string&quot;},&quot;localInfo&quot;:{&quot;countryCode&quot;:&quot;de&quot;,&quot;currencySymbol&quot;:&quot;\u20AC&quot;,&quot;platform&quot;:&quot;Foodpanda&quot;,&quot;platformKey&quot;:&quot;FP_MY&quot;,&quot;currencySymbolPosition&quot;:&quot;&quot;,&quot;currencySymbolSpaces&quot;:&quot;&quot;,&quot;decimalDigits&quot;:&quot;&quot;,&quot;decimalSeparator&quot;:&quot;&quot;,&quot;email&quot;:&quot;&quot;,&quot;phone&quot;:&quot;&quot;,&quot;thousandsSeparator&quot;:&quot;&quot;,&quot;website&quot;:&quot;&quot;},&quot;payment&quot;:{&quot;status&quot;:&quot;online&quot;,&quot;type&quot;:&quot;paid&quot;,&quot;remoteCode&quot;:&quot;online&quot;,&quot;requiredMoneyChange&quot;:&quot;&quot;,&quot;vatId&quot;:&quot;&quot;,&quot;vatName&quot;:&quot;&quot;},&quot;test&quot;:false,&quot;shortCode&quot;:&quot;42&quot;,&quot;preOrder&quot;:false,&quot;pickup&quot;:null,&quot;platformRestaurant&quot;:{&quot;id&quot;:&quot;sq-abcd&quot;},&quot;price&quot;:{&quot;deliveryFees&quot;:[{&quot;name&quot;:&quot;packaging fee&quot;,&quot;value&quot;:2.5}],&quot;grandTotal&quot;:&quot;25.50&quot;,&quot;minimumDeliveryValue&quot;:&quot;9.99&quot;,&quot;payRestaurant&quot;:&quot;25.50&quot;,&quot;riderTip&quot;:&quot;1.20&quot;,&quot;subTotal&quot;:&quot;19.45&quot;,&quot;vatTotal&quot;:&quot;2.50&quot;,&quot;comission&quot;:&quot;&quot;,&quot;containerCharge&quot;:&quot;&quot;,&quot;deliveryFee&quot;:&quot;12.80&quot;,&quot;collectFromCustomer&quot;:&quot;16.34&quot;,&quot;discountAmountTotal&quot;:&quot;2.50&quot;,&quot;deliveryFeeDiscount&quot;:&quot;&quot;,&quot;serviceFeePercent&quot;:&quot;&quot;,&quot;serviceFeeTotal&quot;:&quot;&quot;,&quot;serviceTax&quot;:0,&quot;serviceTaxValue&quot;:0,&quot;differenceToMinimumDeliveryValue&quot;:&quot;&quot;,&quot;vatVisible&quot;:true,&quot;vatPercent&quot;:&quot;string&quot;},&quot;products&quot;:[{&quot;categoryName&quot;:&quot;Burgers&quot;,&quot;name&quot;:&quot;Double Cheese Burger&quot;,&quot;paidPrice&quot;:&quot;8.00&quot;,&quot;quantity&quot;:&quot;string&quot;,&quot;remoteCode&quot;:&quot;123456&quot;,&quot;selectedToppings&quot;:[{&quot;children&quot;:[],&quot;name&quot;:&quot;extra cheese&quot;,&quot;price&quot;:&quot;1.50&quot;,&quot;quantity&quot;:0,&quot;id&quot;:&quot;string&quot;,&quot;remoteCode&quot;:null,&quot;type&quot;:&quot;PRODUCT&quot;}],&quot;unitPrice&quot;:&quot;6.42&quot;,&quot;comment&quot;:&quot;No cheese please&quot;,&quot;description&quot;:&quot;&quot;,&quot;discountAmount&quot;:&quot;&quot;,&quot;halfHalf&quot;:false,&quot;id&quot;:&quot;string&quot;,&quot;selectedChoices&quot;:[],&quot;variation&quot;:{&quot;name&quot;:&quot;Double Cheese Burger&quot;},&quot;vatPercentage&quot;:&quot;&quot;}],&quot;corporateOrder&quot;:false,&quot;corporateTaxId&quot;:&quot;example-tax-id&quot;,&quot;integrationInfo&quot;:{},&quot;mobileOrder&quot;:true,&quot;webOrder&quot;:false,&quot;vouchers&quot;:[]}
+
+08:48:25.116 karate.org.apache.http.conn.HttpHostConnectException: Connect to nifi:8050 [nifi/172.21.0.6] failed: Connection refused (Connection refused), http call failed after 776 milliseconds for url: http://nifi:8050/order
+08:48:25.118 classpath:NifiTests/feature/NifiTest.feature:18
+When method Post
+http call failed after 776 milliseconds for url: http://nifi:8050/order
+classpath:NifiTests/feature/NifiTest.feature:18
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">eval sleep(10000)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def mongoDbResponse =  karate.toString(karate.toJson(dbHandler.findKeyValue(mongodbInfo, &quot;code&quot;,code)))</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print mongoDbResponse</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">match mongoDbResponse contains code</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>NifiTests.feature.NifiTest</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-06-10 08:48:25 AM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:13]"><span>[1:13]</span> <span>Nifi Test - Check With Code from db</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">NifiTests/feature/NifiTest.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Nifi Test</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:13]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">nifi1</a><a class="badge badge-primary" href="karate-tags.html">nifi</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:13]</span>
+                <span class="scenario-name">Nifi Test - Check With Code from db</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1273</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:13]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:13]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def dbHandler = Java.type(&#39;helpers.MongoDbHandler&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.5">08:48:23.651 karate.env system property was: dev 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:13]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def dataGenerator = Java.type(&#39;helpers.DataGenerator&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:13]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def rabbitmqHandler = Java.type(&#39;helpers.RabbitMQHandler&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:13]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def nifiRequestBody = read(&#39;classpath:NifiTests/data/nifiRequest.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">149</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:13]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def sleep = function(ms){ java.lang.Thread.sleep(ms) }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:13]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url apiUrl</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>def code = dataGenerator.getRandomCode()</span>
+      </div>
+    </div>
+    <div class="time-cell passed">139</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>set nifiRequestBody.code =  code</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;order&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request nifiRequestBody</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref failed">18</div>
+      
+      <div class="step-cell failed">
+        <span>When</span>&nbsp;<span>method Post</span>
+      </div>
+    </div>
+    <div class="time-cell failed">961</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.18">08:48:25.022 request:
+1 &gt; POST http://nifi:8050/order
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2352
+1 &gt; Host: nifi:8050
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;token&quot;:&quot;5f373562-591a-4db9-8609-7eec7880f28d&quot;,&quot;code&quot;:&quot;test-82&quot;,&quot;comments&quot;:{&quot;customerComment&quot;:&quot;Please hurry, I am hungry&quot;,&quot;vendorComment&quot;:&quot;&quot;},&quot;createdAt&quot;:&quot;2016-03-14T17:00:00.000Z&quot;,&quot;customer&quot;:{&quot;email&quot;:&quot;s188sduisddsnjknsj&quot;,&quot;firstName&quot;:&quot;food&quot;,&quot;lastName&quot;:&quot;panda&quot;,&quot;mobilePhone&quot;:&quot;+49 99999999&quot;,&quot;code&quot;:&quot;dummy_customer_code&quot;,&quot;id&quot;:&quot;dummy_customer_Id&quot;,&quot;mobilePhoneCountryCode&quot;:&quot;&quot;},&quot;delivery&quot;:{&quot;address&quot;:{&quot;postcode&quot;:10117,&quot;city&quot;:&quot;Berlin&quot;,&quot;street&quot;:&quot;Oranienburger Staße&quot;,&quot;number&quot;:67},&quot;expectedDeliveryTime&quot;:&quot;2016-03-14T17:50:00.000Z&quot;,&quot;expressDelivery&quot;:false,&quot;riderPickupTime&quot;:&quot;2016-03-14T17:35:00.000Z&quot;},&quot;discounts&quot;:[{&quot;name&quot;:&quot;Flat 30% OFF&quot;,&quot;amount&quot;:&quot;10,5&quot;,&quot;type&quot;:&quot;string&quot;}],&quot;expeditionType&quot;:&quot;pickup&quot;,&quot;expiryDate&quot;:&quot;2016-03-14T17:15:00.000Z&quot;,&quot;extraParameters&quot;:{&quot;property1&quot;:&quot;string&quot;,&quot;property2&quot;:&quot;string&quot;},&quot;localInfo&quot;:{&quot;countryCode&quot;:&quot;de&quot;,&quot;currencySymbol&quot;:&quot;\u20AC&quot;,&quot;platform&quot;:&quot;Foodpanda&quot;,&quot;platformKey&quot;:&quot;FP_MY&quot;,&quot;currencySymbolPosition&quot;:&quot;&quot;,&quot;currencySymbolSpaces&quot;:&quot;&quot;,&quot;decimalDigits&quot;:&quot;&quot;,&quot;decimalSeparator&quot;:&quot;&quot;,&quot;email&quot;:&quot;&quot;,&quot;phone&quot;:&quot;&quot;,&quot;thousandsSeparator&quot;:&quot;&quot;,&quot;website&quot;:&quot;&quot;},&quot;payment&quot;:{&quot;status&quot;:&quot;online&quot;,&quot;type&quot;:&quot;paid&quot;,&quot;remoteCode&quot;:&quot;online&quot;,&quot;requiredMoneyChange&quot;:&quot;&quot;,&quot;vatId&quot;:&quot;&quot;,&quot;vatName&quot;:&quot;&quot;},&quot;test&quot;:false,&quot;shortCode&quot;:&quot;42&quot;,&quot;preOrder&quot;:false,&quot;pickup&quot;:null,&quot;platformRestaurant&quot;:{&quot;id&quot;:&quot;sq-abcd&quot;},&quot;price&quot;:{&quot;deliveryFees&quot;:[{&quot;name&quot;:&quot;packaging fee&quot;,&quot;value&quot;:2.5}],&quot;grandTotal&quot;:&quot;25.50&quot;,&quot;minimumDeliveryValue&quot;:&quot;9.99&quot;,&quot;payRestaurant&quot;:&quot;25.50&quot;,&quot;riderTip&quot;:&quot;1.20&quot;,&quot;subTotal&quot;:&quot;19.45&quot;,&quot;vatTotal&quot;:&quot;2.50&quot;,&quot;comission&quot;:&quot;&quot;,&quot;containerCharge&quot;:&quot;&quot;,&quot;deliveryFee&quot;:&quot;12.80&quot;,&quot;collectFromCustomer&quot;:&quot;16.34&quot;,&quot;discountAmountTotal&quot;:&quot;2.50&quot;,&quot;deliveryFeeDiscount&quot;:&quot;&quot;,&quot;serviceFeePercent&quot;:&quot;&quot;,&quot;serviceFeeTotal&quot;:&quot;&quot;,&quot;serviceTax&quot;:0,&quot;serviceTaxValue&quot;:0,&quot;differenceToMinimumDeliveryValue&quot;:&quot;&quot;,&quot;vatVisible&quot;:true,&quot;vatPercent&quot;:&quot;string&quot;},&quot;products&quot;:[{&quot;categoryName&quot;:&quot;Burgers&quot;,&quot;name&quot;:&quot;Double Cheese Burger&quot;,&quot;paidPrice&quot;:&quot;8.00&quot;,&quot;quantity&quot;:&quot;string&quot;,&quot;remoteCode&quot;:&quot;123456&quot;,&quot;selectedToppings&quot;:[{&quot;children&quot;:[],&quot;name&quot;:&quot;extra cheese&quot;,&quot;price&quot;:&quot;1.50&quot;,&quot;quantity&quot;:0,&quot;id&quot;:&quot;string&quot;,&quot;remoteCode&quot;:null,&quot;type&quot;:&quot;PRODUCT&quot;}],&quot;unitPrice&quot;:&quot;6.42&quot;,&quot;comment&quot;:&quot;No cheese please&quot;,&quot;description&quot;:&quot;&quot;,&quot;discountAmount&quot;:&quot;&quot;,&quot;halfHalf&quot;:false,&quot;id&quot;:&quot;string&quot;,&quot;selectedChoices&quot;:[],&quot;variation&quot;:{&quot;name&quot;:&quot;Double Cheese Burger&quot;},&quot;vatPercentage&quot;:&quot;&quot;}],&quot;corporateOrder&quot;:false,&quot;corporateTaxId&quot;:&quot;example-tax-id&quot;,&quot;integrationInfo&quot;:{},&quot;mobileOrder&quot;:true,&quot;webOrder&quot;:false,&quot;vouchers&quot;:[]}
+
+08:48:25.116 karate.org.apache.http.conn.HttpHostConnectException: Connect to nifi:8050 [nifi/172.21.0.6] failed: Connection refused (Connection refused), http call failed after 776 milliseconds for url: http://nifi:8050/order
+08:48:25.118 classpath:NifiTests/feature/NifiTest.feature:18
+When method Post
+http call failed after 776 milliseconds for url: http://nifi:8050/order
+classpath:NifiTests/feature/NifiTest.feature:18
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref skipped">19</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref skipped">20</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>eval sleep(10000)</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref skipped">21</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>def mongoDbResponse =  karate.toString(karate.toJson(dbHandler.findKeyValue(mongodbInfo, &quot;code&quot;,code)))</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref skipped">22</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>print mongoDbResponse</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref skipped">23</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>match mongoDbResponse contains code</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

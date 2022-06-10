@@ -1,0 +1,6 @@
+/usr/src/app/src/test/java/helpers/MongoDbHandler.java
+/usr/src/app/src/test/java/NifiTests/NifiTest.java
+/usr/src/app/src/test/java/helpers/RabbitMQHandler.java
+/usr/src/app/src/test/java/helpers/DataGenerator.java
+/usr/src/app/src/test/java/helpers/Utils.java
+/usr/src/app/src/test/java/helpers/DbHandler.java

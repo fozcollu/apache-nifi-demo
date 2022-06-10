@@ -1,0 +1,21 @@
+08:48:16.755 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @nifi1
+08:48:17.117 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': dev
+08:48:18.969 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+08:48:19.000 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+08:48:23.647 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: dev 
+08:48:25.021 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST http://nifi:8050/order
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 2352
+1 > Host: nifi:8050
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+1 > Accept-Encoding: gzip,deflate
+{"token":"5f373562-591a-4db9-8609-7eec7880f28d","code":"test-82","comments":{"customerComment":"Please hurry, I am hungry","vendorComment":""},"createdAt":"2016-03-14T17:00:00.000Z","customer":{"email":"s188sduisddsnjknsj","firstName":"food","lastName":"panda","mobilePhone":"+49 99999999","code":"dummy_customer_code","id":"dummy_customer_Id","mobilePhoneCountryCode":""},"delivery":{"address":{"postcode":10117,"city":"Berlin","street":"Oranienburger Staße","number":67},"expectedDeliveryTime":"2016-03-14T17:50:00.000Z","expressDelivery":false,"riderPickupTime":"2016-03-14T17:35:00.000Z"},"discounts":[{"name":"Flat 30% OFF","amount":"10,5","type":"string"}],"expeditionType":"pickup","expiryDate":"2016-03-14T17:15:00.000Z","extraParameters":{"property1":"string","property2":"string"},"localInfo":{"countryCode":"de","currencySymbol":"\u20AC","platform":"Foodpanda","platformKey":"FP_MY","currencySymbolPosition":"","currencySymbolSpaces":"","decimalDigits":"","decimalSeparator":"","email":"","phone":"","thousandsSeparator":"","website":""},"payment":{"status":"online","type":"paid","remoteCode":"online","requiredMoneyChange":"","vatId":"","vatName":""},"test":false,"shortCode":"42","preOrder":false,"pickup":null,"platformRestaurant":{"id":"sq-abcd"},"price":{"deliveryFees":[{"name":"packaging fee","value":2.5}],"grandTotal":"25.50","minimumDeliveryValue":"9.99","payRestaurant":"25.50","riderTip":"1.20","subTotal":"19.45","vatTotal":"2.50","comission":"","containerCharge":"","deliveryFee":"12.80","collectFromCustomer":"16.34","discountAmountTotal":"2.50","deliveryFeeDiscount":"","serviceFeePercent":"","serviceFeeTotal":"","serviceTax":0,"serviceTaxValue":0,"differenceToMinimumDeliveryValue":"","vatVisible":true,"vatPercent":"string"},"products":[{"categoryName":"Burgers","name":"Double Cheese Burger","paidPrice":"8.00","quantity":"string","remoteCode":"123456","selectedToppings":[{"children":[],"name":"extra cheese","price":"1.50","quantity":0,"id":"string","remoteCode":null,"type":"PRODUCT"}],"unitPrice":"6.42","comment":"No cheese please","description":"","discountAmount":"","halfHalf":false,"id":"string","selectedChoices":[],"variation":{"name":"Double Cheese Burger"},"vatPercentage":""}],"corporateOrder":false,"corporateTaxId":"example-tax-id","integrationInfo":{},"mobileOrder":true,"webOrder":false,"vouchers":[]}
+
+08:48:25.114 [pool-1-thread-1] ERROR com.intuit.karate - karate.org.apache.http.conn.HttpHostConnectException: Connect to nifi:8050 [nifi/172.21.0.6] failed: Connection refused (Connection refused), http call failed after 776 milliseconds for url: http://nifi:8050/order
+08:48:25.116 [pool-1-thread-1] ERROR com.intuit.karate - classpath:NifiTests/feature/NifiTest.feature:18
+When method Post
+http call failed after 776 milliseconds for url: http://nifi:8050/order
+classpath:NifiTests/feature/NifiTest.feature:18
+08:48:27.358 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:NifiTests/feature/NifiTest.feature

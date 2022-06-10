@@ -1,0 +1,135 @@
+{
+  "token": "5f373562-591a-4db9-8609-7eec7880f28d",
+  "code": #(code),
+  "comments": {
+    "customerComment": "Please hurry, I am hungry",
+    "vendorComment": ""
+  },
+  "createdAt": "2016-03-14T17:00:00.000Z",
+  "customer": {
+    "email": "s188sduisddsnjknsj",
+    "firstName": "food",
+    "lastName": "panda",
+    "mobilePhone": "+49 99999999",
+    "code": "dummy_customer_code",
+    "id": "dummy_customer_Id",
+    "mobilePhoneCountryCode": ""
+  },
+  "delivery": {
+    "address": {
+      "postcode": 10117,
+      "city": "Berlin",
+      "street": "Oranienburger Staße",
+      "number": 67
+    },
+    "expectedDeliveryTime": "2016-03-14T17:50:00.000Z",
+    "expressDelivery": false,
+    "riderPickupTime": "2016-03-14T17:35:00.000Z"
+  },
+  "discounts": [
+    {
+      "name": "Flat 30% OFF",
+      "amount": "10,5",
+      "type": "string"
+    }
+  ],
+  "expeditionType": "pickup",
+  "expiryDate": "2016-03-14T17:15:00.000Z",
+  "extraParameters": {
+    "property1": "string",
+    "property2": "string"
+  },
+  "localInfo": {
+    "countryCode": "de",
+    "currencySymbol": "€",
+    "platform": "Foodpanda",
+    "platformKey": "FP_MY",
+    "currencySymbolPosition": "",
+    "currencySymbolSpaces": "",
+    "decimalDigits": "",
+    "decimalSeparator": "",
+    "email": "",
+    "phone": "",
+    "thousandsSeparator": "",
+    "website": ""
+  },
+  "payment": {
+    "status": "online",
+    "type": "paid",
+    "remoteCode": "online",
+    "requiredMoneyChange": "",
+    "vatId": "",
+    "vatName": ""
+  },
+  "test": false,
+  "shortCode": "42",
+  "preOrder": false,
+  "pickup": null,
+  "platformRestaurant": {
+    "id": "sq-abcd"
+  },
+  "price": {
+    "deliveryFees": [
+      {
+        "name": "packaging fee",
+        "value": 2.5
+      }
+    ],
+    "grandTotal": "25.50",
+    "minimumDeliveryValue": "9.99",
+    "payRestaurant": "25.50",
+    "riderTip": "1.20",
+    "subTotal": "19.45",
+    "vatTotal": "2.50",
+    "comission": "",
+    "containerCharge": "",
+    "deliveryFee": "12.80",
+    "collectFromCustomer": "16.34",
+    "discountAmountTotal": "2.50",
+    "deliveryFeeDiscount": "",
+    "serviceFeePercent": "",
+    "serviceFeeTotal": "",
+    "serviceTax": 0,
+    "serviceTaxValue": 0,
+    "differenceToMinimumDeliveryValue": "",
+    "vatVisible": true,
+    "vatPercent": "string"
+  },
+  "products": [
+    {
+      "categoryName": "Burgers",
+      "name": "Double Cheese Burger",
+      "paidPrice": "8.00",
+      "quantity": "string",
+      "remoteCode": "123456",
+      "selectedToppings": [
+        {
+          "children": [],
+          "name": "extra cheese",
+          "price": "1.50",
+          "quantity": 0,
+          "id": "string",
+          "remoteCode": null,
+          "type": "PRODUCT"
+        }
+      ],
+      "unitPrice": "6.42",
+      "comment": "No cheese please",
+      "description": "",
+      "discountAmount": "",
+      "halfHalf": false,
+      "id": "string",
+      "selectedChoices": [],
+      "variation": {
+        "name": "Double Cheese Burger"
+      },
+      "vatPercentage": ""
+    }
+  ],
+  "corporateOrder": false,
+  "corporateTaxId": "example-tax-id",
+  "integrationInfo": {},
+  "mobileOrder": true,
+  "webOrder": false,
+  "vouchers": []
+}

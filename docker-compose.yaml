@@ -56,13 +56,18 @@ services:
     networks:
       - nifi-network
     healthcheck:
-      test: [ "CMD", "mongo", "--eval", "printjson(db.runCommand({ping: 1}))" ]
+      test:
+        [
+          "CMD",
+          "mongo",
+          "--eval",
+          "printjson(db.runCommand({ping: 1}))"
+        ]
       interval: 10s
       timeout: 10s
       retries: 3
   orderapi:
     build: ./order-api
-    image: order-api-image
     container_name: order-server-api
     networks:
       - nifi-network
@@ -70,12 +75,22 @@ services:
       - "8081:8081"
   invokeapi:
     build: ./invoke-api
-    image: invoke-api-image
     container_name: invoke-api
     networks:
       - nifi-network
     ports:
       - "8082:8082"
+  karate-tests:
+    image: karate-tests
+    build:
+      context: .
+      dockerfile: ./test-automation/NifiTest/Dockerfile
+    volumes:
+      - ./target:/usr/src/app/target
+      - ~/.m2:/root/.m2
+    networks:
+      - nifi-network
+    command: mvn test -Dkarate.options="--tags @nifi1" -Dkarate.env="dev"
 
 networks:
   nifi-network:
@@ -86,4 +101,4 @@ volumes:
   nifi:
   rabbitmq:
 
-    
+
