@@ -62,11 +62,20 @@ services:
       retries: 3
   orderapi:
     build: ./order-api
+    image: order-api-image
     container_name: order-server-api
     networks:
       - nifi-network
     ports:
       - "8081:8081"
+  invokeapi:
+    build: ./invoke-api
+    image: invoke-api-image
+    container_name: invoke-api
+    networks:
+      - nifi-network
+    ports:
+      - "8082:8082"
 
 networks:
   nifi-network:
